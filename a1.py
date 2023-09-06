@@ -16,10 +16,7 @@ from typing import List, TypeVar
 
 
 def absolute(n: int) -> int:
-    if n >= 0:
-        return n
-    elif n < 0:
-        return n*-1 
+     
     """Gives the absolute value of the passed in number. Cannot use the built in
     function `abs`.
 
@@ -29,14 +26,15 @@ def absolute(n: int) -> int:
     Returns:
         the absolute value of the passed in number
     """
-    raise NotImplementedError("absolute")
+    if n >= 0:
+        return n
+    elif n < 0:
+        return n*-1
+    
 
 
 def factorial(n: int) -> int:
-    b = 1
-    for i in range(1, n):
-        b = i*b
-    return b
+    
     """Takes a number n, and computes the factorial n! You can assume the passed in
     number will be positive
 
@@ -46,7 +44,11 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-
+    b = 1
+    for i in range(1, n+1):
+        b = i*b
+    return b
+print(factorial(4))
 
 
 T = TypeVar("T")
@@ -63,6 +65,7 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
+    
     raise NotImplementedError("every_other")
 
 

@@ -36,6 +36,7 @@ def factorial(n: int) -> int:
     b = 1
     for i in range(1, n):
         b = i*b
+    return b
     """Takes a number n, and computes the factorial n! You can assume the passed in
     number will be positive
 
@@ -45,7 +46,7 @@ def factorial(n: int) -> int:
     Returns:
         factorial of the passed in number
     """
-    raise NotImplementedError("factorial")
+
 
 
 T = TypeVar("T")

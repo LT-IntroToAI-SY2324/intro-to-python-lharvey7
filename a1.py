@@ -65,9 +65,13 @@ def every_other(lst: List[T]) -> List[T]:
     Returns:
         a list of every of other item in the original list starting with the first
     """
-    
-    raise NotImplementedError("every_other")
+    new_list = []
+    for i in range (len(lst)):
+        if i % 2 == 0:
+            new_list.append(lst[i])
+    return new_list
 
+   
 
 def sum_list(lst: List[int]) -> int:
     """Takes a list of numbers, and returns the sum of the numbers in that list. Cannot
@@ -79,7 +83,11 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    x = 0
+    for i in range (len(lst)):
+        x = x + lst[i]
+    return x
+
 
 
 def mean(lst: List[int]) -> float:
